@@ -1,0 +1,105 @@
+{
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es2021": true,
+    "es6": true,
+    "node": true
+  },
+  "extends": [
+    "prettier",
+    "airbnb-base",
+    "eslint:recommended",
+    "plugin:security/recommended"
+  ],
+  "plugins": ["prettier", "security"],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parserOptions": {
+    "ecmaVersion": "latest"
+  },
+  "rules": {
+    "quotes": [
+      "error",
+      "single",
+      {
+        "avoidEscape": true,
+        "allowTemplateLiterals": true
+      }
+    ],
+    "arrow-parens": [
+      "error",
+      "as-needed",
+      {
+        "requireForBlockBody": false
+      }
+    ],
+    "indent": "off",
+    "prettier/prettier": [
+      "error",
+      {
+        "useTabs": false,
+        "printWidth": 80,
+        "tabWidth": 2,
+        "singleQuote": true,
+        "trailingComma": "all",
+        "semi": true,
+        "rcVerbose": true,
+        "jsxSingleQuote": true,
+        "bracketSpacing": true,
+        "bracketSameLine": false,
+        "arrowParens": "avoid",
+        "proseWrap": "always",
+        "htmlWhitespaceSensitivity": "strict",
+        "vueIndentScriptAndStyle": true,
+        "endOfLine": "lf",
+        "embeddedLanguageFormatting": "auto"
+      }
+    ],
+    "no-console": "off",
+    "no-unused-expressions": ["error", { "allowTernary": true }],
+    "consistent-return": "off",
+    "no-unsafe-finally": "error",
+    "no-native-reassign": "error",
+    "complexity": ["error", 20],
+    "no-param-reassign": "off",
+    "no-underscore-dangle": "off",
+    "no-use-before-define": "off",
+    "comma-dangle": "error",
+    "operator-linebreak": "off",
+    "require-yield": "error",
+    "camelcase": "off",
+    "no-restricted-syntax": [
+      "error",
+      {
+        "selector": "CallExpression[callee.object.name='console'][callee.property.name!=/^(log|warn|error|info|trace)$/]",
+        "message": "Unexpected property on console object was called"
+      }
+    ],
+    "object-curly-newline": [
+      "error",
+      {
+        "multiline": true,
+        "consistent": true
+      }
+    ],
+    "object-curly-spacing": [
+      "error",
+      "always",
+      {
+        "arraysInObjects": true,
+        "objectsInObjects": true
+      }
+    ],
+    "no-unused-vars": [
+      "error",
+      {
+        "vars": "all",
+        "args": "after-used",
+        "ignoreRestSiblings": false
+      }
+    ]
+  }
+}
